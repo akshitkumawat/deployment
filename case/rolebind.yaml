@@ -4,7 +4,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: projectrole
-  namespace: myapp
+  namespace: akapp
 subjects:
 # You can specify more than one "subject"
 - kind: ServiceAccount
@@ -13,5 +13,5 @@ subjects:
 roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
   kind: ClusterRole #this must be Role or ClusterRole
-  name: admin # this must match the name of the Role or ClusterRole you wish to bind to
+  name: self-provisioner # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
