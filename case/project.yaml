@@ -2,6 +2,8 @@ apiVersion: project.openshift.io/v1
 kind: Project
 metadata:
   name: akapp
+  labels:
+    custom: akshit
 spec:
  finalizers:
    - kubernetes
